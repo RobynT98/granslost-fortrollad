@@ -1,5 +1,5 @@
 ---
-/** BaseHead.astro – förbättrad version */
+/** BaseHead.astro – ren version utan Twitter/X */
 
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
@@ -23,10 +23,6 @@ const canonicalURL = new URL(Astro.url.pathname, site);
 // Absolut bild-URL för sociala medier
 const ogImage = new URL(image.src, site).toString();
 
-// Social handles (valfritt)
-const twitterSite = '@dittkonto';   // ändra/ta bort om du vill
-const twitterCreator = '@dittkonto'; // ändra/ta bort om du vill
-
 // JSON-LD (enkel WebSite)
 const websiteJsonLd = {
   '@context': 'https://schema.org',
@@ -46,10 +42,30 @@ const websiteJsonLd = {
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
-<!-- Maskable ikon (Chrome/Android) -->
+<!-- Maskable ikoner -->
 <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
 <link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png" />
 
-<!-- Theme color (stöd för både ljus/mörk) -->
+<!-- Theme color -->
 <meta name="theme-color" content="#8B0000" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#111111" media="(prefers-colo
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+  {JSON.stringify(websiteJsonLd, null, 2)}
+</script>
