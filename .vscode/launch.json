@@ -2,10 +2,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
+      "name": "Astro: Dev server",
       "request": "launch",
-      "type": "node-terminal"
+      "type": "node-terminal",
+      "command": "npm run dev"
+    },
+    {
+      "name": "Astro: Build",
+      "request": "launch",
+      "type": "node-terminal",
+      "command": "npm run build"
+    },
+    {
+      "name": "Astro: Preview",
+      "request": "launch",
+      "type": "node-terminal",
+      "command": "npm run preview"
     }
   ]
 }
