@@ -1,4 +1,25 @@
---- 
-  export let date; 
 ---
-<p class="text-sm opacity-60">Senast uppdaterad: {new Date(date).toLocaleDateString("sv-SE")}</p>
+export interface Props {
+  date: string | Date;
+}
+
+const { date } = Astro.props;
+const parsedDate = new Date(date);
+---
+
+<p class="last-updated">
+  📅 Senast uppdaterad: {parsedDate.toLocaleDateString("sv-SE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })}
+</p>
+
+<style>
+  .last-updated {
+    font-size: 0.875rem; /* text-sm */
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+</style>
