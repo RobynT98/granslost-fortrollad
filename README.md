@@ -4,11 +4,14 @@
   <img src="public/og-banner.png" alt="Gränslöst Förtrollad – En PWA-blogg" width="800">
 </p>
 
+<p align="center">
+  <a href="https://astro.build"><img src="https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white"></a>
+  <a href="https://vercel.com"><img src="https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel"></a>
+  <a href="src/pages/licens.mdx"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
+</p>
 
-[![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build)
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com)
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](src/pages/licens.mdx)
-
+✨ **Gränslöst Förtrollad** är en personlig **PWA-blogg** byggd med [Astro](https://astro.build), deployad på [Vercel](https://vercel.com).  
+Här blandas vardag, personligt skrivande, nörderi och djupare teman.
 
 En personlig **PWA-blogg** byggd med [Astro](https://astro.build).  
 Här blandas vardag, personligt skrivande, nörderi och djupare teman.  
