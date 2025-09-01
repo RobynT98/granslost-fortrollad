@@ -1,0 +1,14 @@
+---
+const accepted = Astro.cookies.get('cookie-consent')?.value === 'yes';
+function accept() {
+  document.cookie = "cookie-consent=yes;path=/;max-age=31536000";
+  document.getElementById('cookie-banner')?.remove();
+}
+---
+{!accepted && (
+  <div id="cookie-banner" style="position:fixed;bottom:1rem;left:1rem;right:1rem;padding:1rem;background:#111;color:#fff;border-radius:.5rem">
+    Vi använder nödvändiga cookies. Analys sätts bara om du accepterar.
+    <button onClick={accept} style="margin-left:1rem">OK</button>
+    <a href="/cookies" style="margin-left:1rem">Läs mer</a>
+  </div>
+)}
