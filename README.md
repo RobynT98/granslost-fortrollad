@@ -8,6 +8,7 @@
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](src/pages/licens.mdx)
 
+
 En personlig **PWA-blogg** byggd med [Astro](https://astro.build).  
 Här blandas vardag, personligt skrivande, nörderi och djupare teman.  
 
