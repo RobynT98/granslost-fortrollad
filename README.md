@@ -1,62 +1,88 @@
-# Astro Starter Kit: Blog
+# 🌙 Gränslöst Förtrollad  
 
-```sh
-npm create astro@latest -- --template blog
-```
+[![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+En personlig **PWA-blogg** byggd med [Astro](https://astro.build).  
+Här blandas vardag, personligt skrivande, nörderi och djupare teman.  
 
-Features:
+## ✨ Funktioner
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+- 📱 **PWA-stöd** (installera som app)  
+- 📝 Markdown & MDX för inlägg  
+- 🖼 SEO + Open Graph (delbara länkar med bilder)  
+- 🗺 Sitemap & RSS-flöde (`/rss.xml`)  
+- 🎨 Enkel, utbyggbar design med egna komponenter  
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Projektstruktur
 
 ```text
-├── public/
+├── public/              # statiska filer (ikoner, manifest, etc.)
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+│   ├── components/      # återanvändbara komponenter (Header, Footer, etc.)
+│   ├── content/         # bloggposter (MD/MDX + schema)
+│   ├── layouts/         # layouts för sidor & poster
+│   └── pages/           # sidor (index, om, kontakt, etc.)
+├── astro.config.mjs     # Astro-konfiguration
+├── package.json         # npm scripts & dependencies
+└── tsconfig.json        # TypeScript config
+🧞 Kommandon
+Kommando	Gör
+npm install	Installerar beroenden
+npm run dev	Startar lokalt dev-server på http://localhost:4321
+npm run build	Bygger sajten till ./dist/
+npm run preview	Förhandsvisar bygget lokalt
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+🌐 Deployment
+Projektet körs på Vercel.
+Live-version: granslost-fortrollad.vercel.app
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+📜 Licens
+Koden är släppt under MIT-licensen.
+Innehåll och texter © Conri Turesson.
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+🌙 Gränslöst Förtrollad (English)
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+A personal PWA blog built with Astro.
+Mixing everyday reflections, personal writing, nerdy stuff, and darker themes.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+✨ Features
+📱 PWA support (install as an app)
 
-## 👀 Want to learn more?
+📝 Markdown & MDX for blog posts
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+🖼 SEO + Open Graph (shareable links with preview images)
 
-## Credit
+🗺 Sitemap & RSS feed (/rss.xml)
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+🎨 Minimal, extensible design with custom components
+
+🚀 Project Structure
+text
+Kopiera kod
+├── public/              # static files (icons, manifest, etc.)
+├── src/
+│   ├── components/      # reusable components (Header, Footer, etc.)
+│   ├── content/         # blog posts (MD/MDX + schema)
+│   ├── layouts/         # page & post layouts
+│   └── pages/           # routes (index, about, contact, etc.)
+├── astro.config.mjs     # Astro configuration
+├── package.json         # npm scripts & dependencies
+└── tsconfig.json        # TypeScript config
+🧞 Commands
+Command	Action
+npm install	Installs dependencies
+npm run dev	Starts local dev server at http://localhost:4321
+npm run build	Build your site to ./dist/
+npm run preview	Preview your build locally
+
+🌐 Deployment
+Deployed with Vercel.
+Live: granslost-fortrollad.vercel.app
+
+📜 License
+Code released under the MIT license.
+Content & text © Conri Turesson.
