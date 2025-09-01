@@ -36,42 +36,43 @@ Här blandas vardag, personligt skrivande, nörderi och djupare teman.
 ├── astro.config.mjs     # Astro-konfiguration
 ├── package.json         # npm scripts & dependencies
 └── tsconfig.json        # TypeScript config
-🧞 Kommandon
-Kommando	Gör
-npm install	Installerar beroenden
-npm run dev	Startar lokalt dev-server på http://localhost:4321
-npm run build	Bygger sajten till ./dist/
-npm run preview	Förhandsvisar bygget lokalt
+```
 
-🌐 Deployment
-Projektet körs på Vercel.
-Live-version: granslost-fortrollad.vercel.app
+🧞 **Kommandon**
 
-📜 Licens
-Koden är släppt under MIT-licensen.
+| Kommando         | Gör                                               |
+|------------------|--------------------------------------------------|
+| npm install      | Installerar beroenden                             |
+| npm run dev      | Startar lokalt dev-server på http://localhost:4321 |
+| npm run build    | Bygger sajten till ./dist/                        |
+| npm run preview  | Förhandsvisar bygget lokalt                       |
+
+🌐 **Deployment**  
+Projektet körs på Vercel.  
+Live-version: [granslost-fortrollad.vercel.app](https://granslost-fortrollad.vercel.app)
+
+📜 **Licens**  
+Koden är släppt under MIT-licensen.  
 Innehåll och texter © Conri Turesson.
 
-🌙 Gränslöst Förtrollad (English)
+---
 
+## 🌙 Gränslöst Förtrollad (English)
 
-
-A personal PWA blog built with Astro.
+A personal PWA blog built with Astro.  
 Mixing everyday reflections, personal writing, nerdy stuff, and darker themes.
 
-✨ Features
-📱 PWA support (install as an app)
+### ✨ Features
 
-📝 Markdown & MDX for blog posts
+- 📱 PWA support (install as an app)
+- 📝 Markdown & MDX for blog posts
+- 🖼 SEO + Open Graph (shareable links with preview images)
+- 🗺 Sitemap & RSS feed (/rss.xml)
+- 🎨 Minimal, extensible design with custom components
 
-🖼 SEO + Open Graph (shareable links with preview images)
+### 🚀 Project Structure
 
-🗺 Sitemap & RSS feed (/rss.xml)
-
-🎨 Minimal, extensible design with custom components
-
-🚀 Project Structure
-text
-Kopiera kod
+```text
 ├── public/              # static files (icons, manifest, etc.)
 ├── src/
 │   ├── components/      # reusable components (Header, Footer, etc.)
@@ -81,17 +82,21 @@ Kopiera kod
 ├── astro.config.mjs     # Astro configuration
 ├── package.json         # npm scripts & dependencies
 └── tsconfig.json        # TypeScript config
-🧞 Commands
-Command	Action
-npm install	Installs dependencies
-npm run dev	Starts local dev server at http://localhost:4321
-npm run build	Build your site to ./dist/
-npm run preview	Preview your build locally
+```
 
-🌐 Deployment
-Deployed with Vercel.
-Live: granslost-fortrollad.vercel.app
+🧞 **Commands**
 
-📜 License
-Code released under the MIT license.
+| Command         | Action                                         |
+|-----------------|------------------------------------------------|
+| npm install     | Installs dependencies                          |
+| npm run dev     | Starts local dev server at http://localhost:4321 |
+| npm run build   | Build your site to ./dist/                     |
+| npm run preview | Preview your build locally                     |
+
+🌐 **Deployment**  
+Deployed with Vercel.  
+Live: [granslost-fortrollad.vercel.app](https://granslost-fortrollad.vercel.app)
+
+📜 **License**  
+Code released under the MIT license.  
 Content & text © Conri Turesson.
