@@ -1,5 +1,9 @@
 # 🌙 Gränslöst Förtrollad  
 
+<p align="center">
+  <img src="https://granslost-fortrollad.vercel.app/og-banner.png" alt="Gränslöst Förtrollad – En PWA-blogg" width="800">
+</p>
+
 [![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](src/pages/licens.mdx)
