@@ -6,26 +6,72 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-<main>
-  <section class="container hero">
-    <div class="card" style="text-align:center;">
-      <div class="title">
-        <img src="/icon-192.png" alt="GF logga" />
-        <h1>Hej, välkomna!</h1>
-      </div>
-      <p>Välkomna till <strong>Gränslöst Förtrollad</strong></p>
-      <p>Detta är min första egna blogg!</p>
-      <a href="/blog" class="btn">Läs bloggen</a>
-    </div>
-  </section>
-</main>
-
-		<Footer />
-	</body>
+<html lang="sv">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1rem;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+        padding: 2rem;
+        max-width: 32rem;
+        margin: auto;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .title img {
+        width: 72px;
+        height: 72px;
+      }
+      h1 {
+        margin: 0.5rem 0 1rem;
+        font-size: 2rem;
+      }
+      p {
+        margin: 0.5rem 0;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--accent);
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.2s ease;
+      }
+      .btn:hover {
+        background: #a60000; /* mörkare röd */
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="container hero">
+        <div class="card" style="text-align:center;">
+          <div class="title">
+            <img src="/icon-192.png" alt="Logotyp för Gränslöst Förtrollad" />
+            <h1>Hej, välkomna!</h1>
+          </div>
+          <p>Välkomna till <strong>Gränslöst Förtrollad</strong></p>
+          <p>Detta är min första egna blogg!</p>
+          <a href="/blogg" class="btn" aria-label="Gå till bloggen">Läs bloggen</a>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
