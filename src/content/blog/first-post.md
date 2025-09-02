@@ -1,8 +1,10 @@
 ---
-title: "Mitt första inlägg"
-pubDate: 2025-09-01
-description: "Testar bloggen i Astro"
-author: "Conri"
+title: "Första inlägget"
+description: "Ett testinlägg om att starta bloggen."
+pubDate: 2025-09-02
+heroImage: ../../assets/blog-placeholder-1.jpg
+heroAlt: "Platsbild för första inlägget"
+tags: ["intro", "personligt"]
 ---
 
-Hej världen! Första posten 🚀
+Hej och välkommen till mitt första inlägg på **Gränslöst Förtrollad**! ✨
