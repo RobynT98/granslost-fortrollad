@@ -1,9 +1,9 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import BaseHead from '../../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -15,31 +15,54 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   </head>
   <body>
     <Header />
-    <main class="container">
-      <h1>Blogg</h1>
-      <ul class="post-list">
-        {posts.map((p) => (
-          <li class="post">
-            <a href={`/blogg/${p.slug}/`} class="title">{p.data.title}</a>
-            <div class="meta">
-              {p.data.pubDate.toLocaleDateString('sv-SE')}
-            </div>
-            <p class="desc">{p.data.description}</p>
-          </li>
-        ))}
-      </ul>
+    <main id="main" class="container" role="main">
+      <h1 class="page-title">Blogg</h1>
+
+      {posts.length === 0 ? (
+        <p class="empty">Inga inlägg ännu. Kom tillbaka snart. 😊</p>
+      ) : (
+        <ul class="post-list" aria-label="Blogginlägg">
+          {posts.map((p) => (
+            <li class="post">
+              <a href={`/blogg/${p.slug}/`} class="title">{p.data.title}</a>
+              <div class="meta">
+                <time datetime={p.data.pubDate.toISOString()}>
+                  {p.data.pubDate.toLocaleDateString('sv-SE', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+              </div>
+              {p.data.description && <p class="desc">{p.data.description}</p>}
+            </li>
+          ))}
+        </ul>
+      )}
     </main>
     <Footer />
   </body>
 </html>
 
 <style>
+  :root {
+    --ink: #101014;
+    --muted: #666;
+    --line: #ececf1;
+    --brand: #8B0000; /* din mörkröda accent */
+  }
+
   .container { max-width: 980px; margin: 0 auto; padding: 2rem 1rem; }
+  .page-title { margin: 0 0 1rem; font-size: clamp(1.75rem, 3vw, 2.25rem); }
+  .empty { color: var(--muted); margin-top: .5rem; }
+
   .post-list { list-style: none; padding: 0; margin: 1rem 0; }
-  .post { padding: 1rem 0; border-bottom: 1px solid #ececf1; }
+  .post { padding: 1rem 0; border-bottom: 1px solid var(--line); }
   .post:last-child { border-bottom: 0; }
-  .title { font-weight: 700; text-decoration: none; color: var(--ink, #101014); }
-  .title:hover { color: var(--brand, #8B0000); }
-  .meta { font-size: .9rem; color: #666; margin: .25rem 0; }
-  .desc { margin: .25rem 0 0; color: #444; }
+
+  .title { font-weight: 700; text-decoration: none; color: var(--ink); }
+  .title:hover, .title:focus { color: var(--brand); text-decoration: underline; }
+
+  .meta { font-size: .9rem; color: var(--muted); margin: .25rem 0; }
+  .desc { margin: .25rem 0 0; color: #444; line-height: 1.5; }
 </style>

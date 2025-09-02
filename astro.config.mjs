@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import { VitePWA } from 'vite-plugin-pwa';
-
+import { defineConfig } from 'astro/config';
 export default defineConfig({
   // *** VIKTIGT: ändra till din riktiga URL ***
   site: 'https://granslost-fortrollad.vercel.app',
@@ -14,7 +14,6 @@ export default defineConfig({
       i18n: { defaultLocale: 'sv' }
     }),
   ],
-
   vite: {
     plugins: [
       VitePWA({
