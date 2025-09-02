@@ -198,3 +198,50 @@ h2 { font-size: clamp(1.4rem, 1.6vw + .9rem, 1.8rem); }
 
 /* ====== Bilder och iframes responsiva som standard ====== */
 img, svg, video, canvas, iframe { max-width: 100%; height: auto; }
+:root {
+  /* Ljust tema */
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --ink: #101014;
+  --ink-2: #2b2f36;
+  --brand: #8B0000;
+  --brand-2: #B01212;
+}
+
+:root.dark {
+  /* Mörkt tema */
+  --bg: #101014;
+  --card: #1a1a1d;
+  --ink: #f6f7fb;
+  --ink-2: #e5e9f0;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Atkinson", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* Ljust tema (fallback) */
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --ink: #101014;
+  --ink-2: #2b2f36;
+
+  --brand: #8B0000;
+  --brand-2: #B01212;
+}
+
+:root.dark {
+  /* Mörkt tema */
+  --bg: #101014;
+  --card: #1a1a1d;
+  --ink: #f6f7fb;
+  --ink-2: #e5e9f0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
