@@ -245,3 +245,17 @@ body {
   background: var(--bg);
   color: var(--ink);
 }
+/* Light default */
+:root {
+  --bg: #f6f7fb;
+  --ink: #101014;
+}
+
+/* Dark mode */
+:root.dark {
+  --bg: #0f1216;
+  --ink: #e7e9ee;
+}
+
+html { background: var(--bg); color: var(--ink); }
+body { background: var(--bg); color: var(--ink); }

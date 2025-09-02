@@ -5,7 +5,7 @@
     "src",
     "astro.config.mjs",
     "env.d.ts"
-  ],
+, "public/theme.js"  ],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "strictNullChecks": true,
